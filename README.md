@@ -766,43 +766,48 @@ CREATE TABLE IF NOT EXISTS stats (date TEXT PRIMARY KEY, count INTEGER DEFAULT 0
     <img width="1101" height="801" alt="image" src="https://github.com/user-attachments/assets/e43adb91-091d-4b77-a2bf-90340c583177" />
 3.  **特别注意**：后续修改内容要在 GitHub 上的 `_worker.js` 进行修改，之后会自动同步到 Pages。
 4.  点击 **开始设置**，然后 **保存并部署**。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/1c215f82-98fc-42d0-aed5-2bd032e3b859" />
+    <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/e58ce4f7-6a59-4a0b-b87c-1e5813641a8f" />
+
 
 **方法 2：直接上传**
-1.  选择 **上传资产**。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/5f823410-7308-4425-9e77-a66646235e00" />
+1.  选择 **拖放文件**。
+    <img width="989" height="384" alt="image" src="https://github.com/user-attachments/assets/b438dc31-4c83-4145-b84c-90a98e90a2fa" />
 2.  输入项目名称，点击创建。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/c10dc676-a06a-4a6b-bc62-f24239f454b0" />
+    <img width="1279" height="701" alt="image" src="https://github.com/user-attachments/assets/91234616-393b-4964-a285-95fc43dbc8a4" />
 3.  上传包含 `_worker.js` 的 **Zip 压缩包** 或 **文件夹**。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/5dec9d85-9fcb-4b95-89c6-a7d8c57be661" />
+    <img width="1267" height="851" alt="image" src="https://github.com/user-attachments/assets/07ea298b-41c2-4e2a-b178-85de3a32ae5c" />
 4.  点击 **部署站点**。
 
 ---
 
 ### 方式二：Snippets 代码版 (`snippets.js`)
 
-**适用场景：已有域名托管在 Cloudflare，想利用 Snippets 功能**
+**适用场景：需要你的已有域名托管在 Cloudflare，已经开通或者有 Snippets 功能**
 
 1.  进入 Cloudflare Dashboard，点击你的**域名**。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/2483c2b7-3bb2-4cac-bdd6-38f8b31f4329" />
-2.  在左侧菜单找到 **规则 (Rules)** -> **Snippets**，点击 **创建片段**。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/9059a47d-77da-4ba4-82cc-03e8a8638c0f" />
+    <img width="449" height="231" alt="image" src="https://github.com/user-attachments/assets/6c5b6498-13eb-4543-83b9-60363113a8cc" />
+2.  在左侧菜单找到 **规则 (Rules)** -> **找到Snippets**，点击 **创建片段**。
+    <img width="1613" height="670" alt="image" src="https://github.com/user-attachments/assets/23fa775d-86ea-419e-9e92-dc1588c312fd" />
 3.  输入片段名称。
-4.  将项目中的 **`snippets.js`** 内容完整复制粘贴进去。
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/f163e9ef-989b-4645-8ebc-eadf755f4b23" />
-5.  **设置触发规则**：
-    *   选择 **自定义规则**。
+     <img width="395" height="66" alt="image" src="https://github.com/user-attachments/assets/e9f1f184-a4c3-4d5e-b9ab-d00a2ca70736" />
+5.  将项目中的 **`snippets.js`** 内容完整复制粘贴进去。
+    <img width="1113" height="776" alt="image" src="https://github.com/user-attachments/assets/08370a77-0e13-42ba-a7ce-cb912fd42133" />
+6.  **设置触发规则**： 点击片段规则
+     <img width="320" height="103" alt="image" src="https://github.com/user-attachments/assets/612972e1-3607-48b7-a86f-785bc4245070" />
+    *   选择 **自定义筛选表达式**。
     *   字段：`主机名 (Hostname)`
     *   运算符：`等于 (equals)`
     *   值：你的子域名 (例如 `sub.yourdomain.com`)
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/1f858efe-a6ce-4bf6-8d62-0bfc462ef2b3" />
-6.  点击 **创建片段** 保存。
-7.  **配置 DNS (重要)**：
+    <img width="633" height="918" alt="image" src="https://github.com/user-attachments/assets/57505404-f6e6-4e83-a87e-0e8a0804c068" />
+    点击 **完成**
+8.  点击 **创建片段** 保存。
+9.  **配置 DNS (重要)**：创建新代理 DNS 记录
     *   前往 **DNS** 设置页，添加一条 **A 记录**。
     *   **名称**：填写上面设置的子域名 (例如 `sub`)。
     *   **IPv4 地址**：`192.0.2.1` (保留地址，仅作占位用)。
     *   **代理状态**：必须开启 **小黄云 (Proxied)**。
-    <img width="600" alt="image" src="https://github.com/user-attachments/assets/f88ad346-30aa-41ef-9f7c-deb2453afbfe" />
+    <img width="642" height="460" alt="image" src="https://github.com/user-attachments/assets/dfb27a34-4045-4b19-9096-e040ac98c190" />
+
 
 ---
 
@@ -1247,11 +1252,12 @@ UUID_REFRESH = 86400
 
 **步骤 1**：登录 Cloudflare Dashboard，在左侧菜单找到 **计算和 AI** → **Workers 和 Pages**。
 
-<img width="200" alt="Workers和Pages入口" src="./issue/计算和AI.png" />
+<img width="267" height="75" alt="image" src="https://github.com/user-attachments/assets/b515b4d5-ef25-43f6-a1a5-e902d09a08c6" />
 
 **步骤 2**：在右侧页面找到 **Account Details** 区域，复制 **Account ID**。
 
-<img width="400" alt="Account ID位置" src="./issue/账户ID.png" />
+<img width="1469" height="852" alt="image" src="https://github.com/user-attachments/assets/a53b40b0-b12a-49a1-98d6-b021fd52cacf" />
+
 
 ---
 
@@ -1261,26 +1267,37 @@ UUID_REFRESH = 86400
 
 **步骤 1**：点击左侧菜单底部的 **管理账户** → **帐户 API 令牌**。
 
-<img width="200" alt="帐户API令牌入口" src="./issue/创建账户API.png" />
+<img width="247" height="151" alt="image" src="https://github.com/user-attachments/assets/6c031f38-ad39-4ad5-813e-3a59aae1f715" />
 
 **步骤 2**：点击右侧的 **创建令牌** 按钮。
 
-<img width="800" alt="创建令牌按钮" src="./issue/创建账户API令牌.png" />
+<img width="1399" height="468" alt="image" src="https://github.com/user-attachments/assets/7add8503-87d8-4809-982a-1e27d4605a9f" />
 
 **步骤 3**：在 **API 令牌模板** 列表中，找到 **阅读分析数据和日志**，点击右侧的 **使用模板** 按钮。
 
-<img width="600" alt="选择模板" src="./issue/API模版为阅读分析数据和日志.png" />
+<img width="1127" height="259" alt="image" src="https://github.com/user-attachments/assets/27592926-99bd-4fa4-a923-ffeed7d09025" />
 
-**步骤 4**：配置令牌权限（模板已自动配置好权限，只需配置区域资源）：
-- **区域资源**：选择 **包括** → **帐户的所有区域** → 选择你的 **账户名称**
+**步骤 4**：配置令牌权限（模板已自动配置好权限，只需配置区域资源）： 令牌名称-权限策略-选择整个账户
+- **令牌名称**： **编辑策略** → **整个账户** → 选择你的 **整个账号**
 
-<img width="800" alt="配置权限" src="./issue/创建令牌完整流程.png" />
+<img width="1171" height="359" alt="image" src="https://github.com/user-attachments/assets/ad2e0318-e486-4bf5-92f8-b4ee54b409e9" />
 
 **步骤 5**：滚动到页面底部，点击 **创建令牌** 按钮。
 
 <img width="600" alt="确认创建" src="./issue/确定创建账户API令牌.png" />
 
-**步骤 6**：创建成功后，**立即复制并保存 Token**（只显示一次，关闭后无法再次查看）。
+**步骤 6**：设置令牌过期时间 点击 **审核令牌** 按钮。 并点击 **创建令牌** 按钮
+
+<img width="1178" height="406" alt="image" src="https://github.com/user-attachments/assets/48c7d58b-4ed5-4eb9-8236-86a4785e02a6" />
+<img width="1192" height="708" alt="image" src="https://github.com/user-attachments/assets/8cbe9110-70c4-4242-9644-d2a1865e16cd" />
+
+**步骤 7**：创建成功后，**立即复制并保存 Token**（只显示一次，关闭后无法再次查看）。
+
+<img width="582" height="555" alt="image" src="https://github.com/user-attachments/assets/c3c8fcc1-417e-46ae-b0da-cae0116071f0" />
+
+**步骤 8** 如果忘记令牌token， **点击轮转 可以重新获取新的token令牌**  [token令牌只显示一次，关闭之后无法再次查看]     
+
+<img width="1347" height="366" alt="image" src="https://github.com/user-attachments/assets/8e5ed225-6a62-4e2f-8207-1c2250ca37e1" />
 
 ---
 
@@ -1293,20 +1310,23 @@ UUID_REFRESH = 86400
 1. 点击 Cloudflare 右上角的 **头像图标**。
 2. 在下拉菜单中点击 **配置文件**。
 
-<img width="200" alt="配置文件入口" src="./issue/邮箱定位.png" />
+<img width="178" height="284" alt="image" src="https://github.com/user-attachments/assets/c18624f7-9a22-438c-8dc0-552ef1fe0af3" />
 
-3. 在 **个人简介** → **设置** 页面，找到 **电子邮件** 字段，这就是你的 `CF_EMAIL`。
+3. 在 **我的个人资料** → **设置** 页面，找到 **电子邮件** 字段，这就是你的 `CF_EMAIL`。
 
-<img width="400" alt="电子邮件位置" src="./issue/查看个人邮箱.png" />
+<img width="921" height="147" alt="image" src="https://github.com/user-attachments/assets/ccfda79f-2899-4b25-b68d-e4151ba56e8c" />
 
 **步骤 2：获取 Global API Key**
 
 1. 在左侧菜单点击 **API 令牌**。
-2. 滚动到页面底部，找到 **API 密钥** 区域。
-3. 在 **Global API Key** 行，点击右侧的 **查看** 按钮。
-4. 输入密码验证后，复制显示的 Key，这就是你的 `CF_KEY`。
+   <img width="254" height="228" alt="image" src="https://github.com/user-attachments/assets/d78d50af-b169-46bf-a81e-09fc9b2407c0" />
+3. 滚动到页面底部，找到 **API 密钥** 区域。
+4. 在 **Global API Key** 行，点击右侧的 **查看** 按钮。
+   <img width="1505" height="726" alt="image" src="https://github.com/user-attachments/assets/60d0f4ab-2a52-418c-a3b3-c8e00dbd2d9d" />
+6. 输入密码验证后，复制显示的 Key，这就是你的 `CF_KEY`。
 
-<img width="800" alt="Global API Key位置" src="./issue/创建全局API.png" />
+<img width="1352" height="548" alt="image" src="https://github.com/user-attachments/assets/15223719-284c-40c6-83ed-7ce98b660a42" />
+
 
 > ⚠️ **安全提示**：Global API Key 拥有账户的完全访问权限，请妥善保管，不要泄露给他人。建议优先使用方案 A（API Token）。
 
