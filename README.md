@@ -550,7 +550,7 @@ let SUBINI = 'https://raw.githubusercontent.com/'+'cm'+'liu/ACL4SSR/main/'+'Cl'+
 | **`PS`** | 可选 | **节点备注** (自动追加到节点名称后)<br>*支持本地节点与上游订阅双重生效* | `【专线】` | ❌ |
 | **`LOGIN_PAGE_TITLE`** | 可选 | **登录页面标题** (浏览器标签页显示的标题) | `Worker Login` | ❌ |
 | **`DASHBOARD_TITLE`** | 可选 | **后台管理页面标题** (浏览器标签页显示的标题) | `烈火控制台 · Glass LH` | ❌ |
-| **`DLS`** | 可选 | **ADDCSV 速度下限筛选阈值** (单位 KB/s)<br>*低于此速度的节点会被过滤，默认 5000* | `5000` | ❌ |
+| **`DLS`** | 可选 | **ADDCSV 速度下限筛选阈值** (单位 MB/s)<br>*低于此速度的节点会被过滤，默认 7MB* | `7MB` | ❌ |
 | **`SUB_TOKEN`** | 可选 | **Desire 裂变 Token** (留空不启用)<br>*启用后 SUB_DOMAIN 填 Desire 域名走裂变模式* | `my-secret-token` | ❌ |
 | **`ECH_ENABLED`** | 可选 | **ECH 开关** (`true`/`false`，默认 `true`)<br>*开启后自动注入 ECH Config 到 Sing-box/Clash 订阅* | `true` | ❌ |
 | **`ECH_SNI`** | 可选 | **ECH 解析域名** (用于 DoH 查询 ECH Config) | `cloudflare-ech.com` | ❌ |
@@ -582,7 +582,7 @@ let SUBINI = 'https://raw.githubusercontent.com/'+'cm'+'liu/ACL4SSR/main/'+'Cl'+
 | :--- | :--- | :--- | :---: |
 | `TG_GROUP_URL` | **登录页交流群链接** | `https://t.me/zyssadmin` | ❌ |
 | `SITE_URL` | **登录页网站链接** | `https://blog.2026565.xyz/` | ❌ |
-| `GITHUB_URL` | **登录页项目链接** | `https://github.com/xtgm/stallTCP1.32V2` | ❌ |
+| `GITHUB_URL` | **登录页项目链接** | `https://github.com/xtgm/stallTCP1.32-V2` | ❌ |
 | `PROXY_CHECK_URL` | **后台 ProxyIP 检测跳转地址** | `https://kaic.hidns.co/` | ❌ |
 
 ### 📋 订阅转换配置 (可选)
@@ -647,9 +647,9 @@ https://backup.com/speed-test.csv
 
 **ADDCSV 高级功能 - DLS 速度筛选：**
 - CSV 文件格式：`IP,端口,TLS,数据中心,地区,城市,网络延迟,下载速度`
-- 配合 `DLS` 环境变量设置速度下限（单位 KB/s）
+- 配合 `DLS` 环境变量设置速度下限（单位 MB/s）
 - 下载速度低于 `DLS` 值的节点会被自动过滤
-- 默认阈值为 5000 KB/s
+- 默认阈值为 7 MB/s
 
 ---
 
